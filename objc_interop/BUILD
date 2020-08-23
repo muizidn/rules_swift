@@ -4,7 +4,7 @@
 
 load("@rules_cc//cc:defs.bzl", "objc_library")
 load(
-    "//swift:swift.bzl",
+    "@build_bazel_rules_swift//swift:swift.bzl",
     "swift_binary",
     "swift_library",
 )

@@ -13,7 +13,11 @@
 // limitations under the License.
 
 import Foundation
+#if canImport(_PrintStream)
+import _PrintStream
+#else 
 import objc_interop_PrintStream
+#endif
 
 
 @objc(OIPrinter)

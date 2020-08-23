@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-#import "examples/apple/objc_interop/OIPrintStream.h"
+#import "objc_interop/OIPrintStream.h"
 
 @implementation OIPrintStream {
   NSFileHandle *_fileHandle;
@@ -26,6 +26,7 @@
 }
 
 - (void)printString:(nonnull NSString *)message {
+  NSLog(@"User");
   NSData *data = [message dataUsingEncoding:NSUTF8StringEncoding];
   [_fileHandle writeData:data];
   NSData *newline = [NSData dataWithBytes:"\n" length:1];
